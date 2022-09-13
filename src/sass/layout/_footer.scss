@@ -1,0 +1,43 @@
+footer {
+  background-color: $whisper;
+  border: 1px solid $porcelain;
+  text-align: center;
+  .container {
+    @include container(1170px);
+  }
+  .foot-logo,
+  .social-lnks {
+    line-height: 100px;
+  }
+  .foot-logo {
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+  }
+  .get-the-app {
+    display: inline-block;
+  }
+  .social-lnks {
+    float: right;
+    .fa-brands {
+      border: solid 1px $porcelain;
+      border-radius: 6px;
+      padding: 10px;
+      color: $silver-sand;
+      background-color: $white;
+    }
+  }
+  &::after {
+    @include container(1170px);
+    content: "© Logo, 2018. All rights reserved.";
+    font-size: 11px;
+    display: block;
+    text-align: left;
+    padding: 10px 0;
+    color: $santas-gray;
+    background-color: $athens-gray;
+  }
+  hr {
+    border-top: 1px solid $porcelain;
+  }
+}

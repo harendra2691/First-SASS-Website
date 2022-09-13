@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "SourceSansPro-Regular";
+  src: url(/src/fonts/SourceSansPro-Regular.ttf) format("truetype");
+}
+
+body {
+  font-family: "SourceSansPro-Regular";
+}
+
+.title-lg {
+  font-weight: bold;
+  font-size: 70px;
+}
+.heading-lg {
+  font-size: 26px;
+}
+.text-sm {
+  font-size: 16px;
+}
+.heading-sm {
+  font-size: 22px;
+  font-weight: bold;
+  color: $rhino;
+  line-height: 1.59;
+  text-transform: uppercase;
+}
+.text-lg {
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.59;
+}
+.link {
+  font-size: 18px;
+  font-weight: 600;
+  color: $rose;
+}

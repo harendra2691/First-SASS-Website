@@ -1,0 +1,14 @@
+.nav {
+  .nav-links {
+    color: $white;
+    font-size: 18px;
+  }
+
+  .nav-links li {
+    display: inline-block;
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

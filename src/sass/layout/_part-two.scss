@@ -1,0 +1,21 @@
+.part-two {
+  padding: 110px 0;
+
+  .container {
+    @include container(960px);
+    display: flow-root;
+  }
+  .about-txt,
+  .about-card {
+    float: left;
+    width: calc((100% - 30px) / 2);
+  }
+  .about-txt {
+    margin-right: 30px;
+
+    .heading-sm,
+    .text-lg {
+      margin-bottom: 5px;
+    }
+  }
+}

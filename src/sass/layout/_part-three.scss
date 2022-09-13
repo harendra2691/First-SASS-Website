@@ -1,0 +1,45 @@
+.part-three {
+  padding: 50px 0;
+  .container {
+    @include container(960px);
+    display: flow-root;
+  }
+  .i-mac,
+  .about-mac {
+    width: calc((100% - 30px) / 2);
+    float: left;
+  }
+  .i-mac {
+    margin-right: 30px;
+  }
+  .about-mac {
+    margin-top: 18%;
+    .heading-sm {
+      margin-bottom: 5px;
+    }
+    .text-lg {
+      margin-bottom: 26px;
+      &::after {
+        border-bottom: thin solid $royal-purple;
+        opacity: 0.25;
+        margin-bottom: 26px;
+        display: block;
+        content: "";
+        margin-top: 26px;
+      }
+    }
+
+    .text-sm {
+      float: left;
+      width: 70%;
+      vertical-align: super;
+      margin-right: 15px;
+      line-height: 1.5;
+
+      span {
+        color: $rose;
+        font-weight: 600;
+      }
+    }
+  }
+}

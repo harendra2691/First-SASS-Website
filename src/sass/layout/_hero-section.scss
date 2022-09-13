@@ -1,0 +1,30 @@
+.hero {
+  background: url("/src/images/background.png") no-repeat center/cover;
+  min-height: 771px;
+  width: 100%;
+  position: relative;
+
+  article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: $white;
+  }
+  .title-lg {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .heading-lg {
+    margin-bottom: 30px;
+  }
+  .text-sm {
+    font-weight: bold;
+    background-color: $caribbean-green;
+    padding: 15px 50px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+}

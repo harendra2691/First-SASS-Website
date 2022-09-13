@@ -1,0 +1,19 @@
+{
+  "name": "first-sass-website",
+  "version": "1.0.0",
+  "description": "my-first-sass-webpage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harendra2691/First-SASS-Website.git"
+  },
+  "author": "harendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harendra2691/First-SASS-Website/issues"
+  },
+  "homepage": "https://github.com/harendra2691/First-SASS-Website#readme"
+}

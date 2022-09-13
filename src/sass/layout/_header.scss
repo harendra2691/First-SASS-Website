@@ -1,0 +1,20 @@
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  .container {
+    @include container(960px);
+  }
+  .wrapper {
+    padding: 3% 0;
+  }
+  .wrapper nav {
+    float: right;
+  }
+  .logo {
+    display: inline-block;
+    color: $white;
+    font-size: 22px;
+  }
+}
