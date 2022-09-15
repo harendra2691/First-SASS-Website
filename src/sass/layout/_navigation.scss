@@ -2,13 +2,39 @@
   .nav-links {
     color: $white;
     font-size: 18px;
+    position: initial;
+    display: inline-block;
+    background: none;
+    padding-top: 0;
   }
 
-  .nav-links li {
-    display: inline-block;
-    margin-right: 50px;
-    &:last-child {
-      margin-right: 0;
+  #toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    @include prefix(transform, rotate(405deg), webkit ms);
+    background-color: #ff0000;
+  }
+
+  #toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  #toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    @include prefix(transform, rotate(-405deg), webkit ms);
+    background-color: #ff0000;
+  }
+  @include respond-to("small") {
+    .nav-links {
+      display: none;
+      background: #ffffff;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      line-height: 32px;
+      z-index: 10;
+      padding-top: 100px;
     }
   }
 }

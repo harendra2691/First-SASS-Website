@@ -1,5 +1,58 @@
-@mixin container($max-width) {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 16px;
+@mixin clear {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+
+    // @mixin media($conditions...) { 
+    //   @if ($im-media-support and length($conditions) == 0) or 
+    //       (not $im-media-support and im-intercepts-static-breakpoint($conditions...)) {
+    //     @content;
+    //   } @else if ($im-media-support and length($conditions) > 0) {
+    //     @media #{unquote(parse-expression(nth($conditions, 1)))} {
+    //       // Recursive call
+    //       @include media(slice($conditions, 2)...) {
+    //         @content;
+    //       }
+    //     }    
+    //   }
+    //  }
+     
+
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
 }
+
+
+
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+
+

@@ -1,0 +1,133 @@
+.part-two {
+  padding: 110px 0;
+  @include respond-to("small") {
+    padding: 80px 0;
+  }
+
+  .container {
+    @include clear;
+  }
+
+  .about-txt {
+    margin-right: 30px;
+  }
+  .heading-sm,
+  .text-lg {
+    margin-bottom: 5px;
+  }
+
+  @include respond-to("small") {
+    .about-txt,
+    .about-card {
+      width: 100%;
+    }
+    .about-txt {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.part-three {
+  padding: 50px 0;
+
+  .container {
+    @include clear;
+  }
+
+  .i-mac {
+    margin-right: 30px;
+  }
+  .about-mac {
+    margin-top: 18%;
+  }
+  .heading-sm {
+    margin-bottom: 5px;
+  }
+  .text-lg {
+    margin-bottom: 26px;
+    &::after {
+      border-bottom: thin solid $royal-purple;
+      opacity: 0.25;
+      margin-bottom: 26px;
+      display: block;
+      content: "";
+      margin-top: 26px;
+    }
+  }
+
+  .text-sm {
+    float: left;
+    width: 70%;
+    vertical-align: super;
+    margin-right: 15px;
+    line-height: 1.5;
+
+    span {
+      color: $rose;
+      font-weight: 600;
+    }
+  }
+  @include respond-to("small") {
+    .i-mac,
+    .about-mac {
+      width: 100%;
+    }
+    .i-mac {
+      margin-right: 0;
+    }
+    .about-mac {
+      margin-top: 30px;
+    }
+  }
+}
+
+.part-four {
+  padding: 150px 0;
+
+  .container {
+    @include clear;
+  }
+
+  .about-i-pad {
+    margin-right: 30px;
+  }
+  .heading-sm {
+    margin-bottom: 5px;
+  }
+  .text-lg {
+    margin-bottom: 20px;
+  }
+  .features {
+    float: left;
+    margin-right: 38px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .feature-name {
+    margin-bottom: 22px;
+  }
+  .feature-name::before {
+    content: "\2713";
+    color: $white;
+    height: 30px;
+    width: 30px;
+    background-color: $caribbean-green;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-right: 10px;
+  }
+  @include respond-to("small") {
+    .part-four {
+      padding: 65px 0;
+    }
+    .about-i-pad,
+    .i-pad {
+      width: 100%;
+    }
+    .about-i-pad {
+      margin-right: 0;
+    }
+  }
+}

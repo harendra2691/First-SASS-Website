@@ -4,7 +4,8 @@
   "description": "my-first-sass-webpage",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./src/sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./src/sass/main.scss:./css/style.css",
+    "autoprefixer": "postcss css/style.css --use autoprefixer -d build/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/harendra2691/First-SASS-Website/issues"
   },
-  "homepage": "https://github.com/harendra2691/First-SASS-Website#readme"
+  "homepage": "https://github.com/harendra2691/First-SASS-Website#readme",
+  "dependencies": {
+    "dev-server": "^0.2.0",
+    "include-media": "^1.4.10",
+    "sass": "^1.54.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.10",
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.3",
+    "postcss-cli": "^10.0.0"
+  }
 }

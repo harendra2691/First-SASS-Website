@@ -3,9 +3,6 @@ header {
   width: 100%;
   z-index: 1;
 
-  .container {
-    @include container(960px);
-  }
   .wrapper {
     padding: 3% 0;
   }
@@ -16,5 +13,51 @@ header {
     display: inline-block;
     color: $white;
     font-size: 22px;
+  }
+  .toggle,
+  .wrapper label {
+    display: none;
+  }
+  #toggle:checked ~ .nav-links {
+    display: block;
+    position: fixed;
+    height: 100%;
+  }
+
+  .wrapper label {
+    color: #ffffff;
+    z-index: 11;
+    position: relative;
+    top: 12px;
+    right: 30px;
+  }
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    background-color: #ffffff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    @include prefix(
+      transition,
+      transform 400ms cubic-bezier(0.23, 1, 0.32, 1),
+      webkit o
+    );
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: "";
+    margin-top: -8px;
+  }
+
+  .menu-button::after {
+    content: "";
+    margin-top: 8px;
+  }
+  @include respond-to("small") {
+    .wrapper label {
+      display: initial;
+    }
   }
 }

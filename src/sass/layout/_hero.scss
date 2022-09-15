@@ -8,7 +8,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    @include prefix(transform, translate(-50%, -50%), webkit ms);
     width: 100%;
     text-align: center;
     color: $white;
@@ -20,11 +20,14 @@
   .heading-lg {
     margin-bottom: 30px;
   }
-  .text-sm {
-    font-weight: bold;
-    background-color: $caribbean-green;
-    padding: 15px 50px;
-    border-radius: 5px;
-    text-transform: uppercase;
+ 
+
+  @include respond-to("small") {
+    .hero {
+      min-height: 550px;
+    }
+    .title-lg {
+      font-size: 52px;
+    }
   }
 }

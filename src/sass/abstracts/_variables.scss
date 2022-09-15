@@ -1,0 +1,38 @@
+$white: #ffffff;
+$caribbean-green: #00d5a6;
+$rhino: #33325f;
+$mine-shaft: #2b2b2b;
+$rose: #ff0161;
+$shark: #282b31;
+$silver-sand: #b9bdc3;
+$royal-purple: #773fa1;
+$whisper: #fbfafc;
+$porcelain: #e7e8ea;
+$athens-gray: #f8f9fa;
+$santas-gray: #999ea8;
+
+// BREAKPOINTS
+$breakpoints: (
+  "small": (
+    max-width: 500px,
+  ),
+  "medium": (
+    max-width: 500px,
+  ),
+  "large": (
+    min-width: 1000px,
+  ),
+  "huge": (
+    min-width: 1200px,
+  ),
+);
+
+$breakpoints: (
+  "small": 500px,
+
+  "medium": 500px,
+
+  "large": 1000px,
+
+  "huge": 1200px,
+) !default;

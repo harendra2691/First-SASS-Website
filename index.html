@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/3235c268e4.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>First SASS-Page</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+      function disableScroll() {
+        document.body.classList.toggle("stop-scrolling");
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -14,6 +18,10 @@
         <div class="wrapper">
           <a href="javascript:void(0)" class="logo">LOGO</a>
           <nav class="nav">
+            <input id="toggle" type="checkbox" onclick="disableScroll()" />
+            <label for="toggle" class="menu-button-container">
+              <span class="menu-button"></span>
+            </label>
             <ul class="nav-links">
               <li><a href="javascript:void(0)">About</a></li>
               <li><a href="javascript:void(0)">What we do</a></li>
@@ -28,37 +36,38 @@
         <article>
           <h1 class="title-lg">secure data management</h1>
           <h4 class="heading-lg">Clarity for Complexity</h4>
-          <a href="javascript:void(0)" class="text-sm">What we do</a>
+          <p  class="text-sm"> <a href="javascript:void(0)" class="hero-btn">What we do</a></p>
+         
         </article>
       </section>
       <section class="part-two">
         <div class="container">
-          <div class="about-txt">
+          <article class="about-txt common-layout">
             <h3 class="heading-sm">Lorem Ipsum is simply dummy</h3>
             <p class="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <p class="link"><a href="javascript:void(0)">CTA Link &nbsp;<i class="fa fa-light fa-arrow-right"></i></a></p>
-          </div>
-         <div class="about-card">
-          <img src="/src/images/text-card.png" alt="info" />
-         </div>
+            <p class="link"><a href="javascript:void(0)">CTA Link &nbsp;&#8594;</a></p>
+          </article>
+         <figure class="about-card common-layout">
+          <img src="/src/images/text-card.png" alt="info" width="415px" height="176px" class="contain"/>
+         </figure>
         </div>
       </section>
       <section class="part-three">
         <div class="container">
-          <div class="i-mac">
-            <img src="/src/images/i-mac.png" alt="i-mac"/>
-          </div>
-          <div class="about-mac">
+         
+          <article class="about-mac common-layout">
             <h3 class="heading-sm">Lorem Ipsum is simply dummy</h3>
             <p class="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>      
             <p class="text-sm"><span>Lorem Ipsum is simply dummy text</span> of the printing and typesetting industry. Lorem Ipsum is simply dummy text.</p> <img src="/src/images/stat.png" alt="stats" width="70px";
             height="70px"/>
-           
-        </div>
+          </article>
+          <figure class="i-mac common-layout">
+            <img src="/src/images/i-mac.png" alt="i-mac" width="433px" height="524px" class="contain"/>
+          </figure>
       </section>
       <section class="part-four">
         <div class="container">
-          <div class="about-i-pad">
+          <article class="about-i-pad common-layout">
           <h3 class="heading-sm">Lorem Ipsum is simply dummy</h3>
           <p class="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
           <ul class="features">
@@ -71,30 +80,34 @@
             <li class="text-sm feature-name">Feature Name</li>
             <li class="text-sm feature-name">Feature Name</li>
           </ul> 
-        </div>
-        <div class="i-pad">
-          <img src="/src/images/i-pad.png" alt="i-pad"/>
-        </div>
+        </article>
+        <figure class="i-pad common-layout">
+          <img src="/src/images/i-pad.png" alt="i-pad" width="595px" height="387px" class="contain"/>
+        </figure>
         </div>
       </section>
     </main>
     <footer>
-        <div class="container">
+        <div class="foot-container">
           <div class="foot-logo">
             <a href="javascript:void(0)">LOGO</a>
           </div>
           <div class="get-the-app">
-            <img src="/src/images/app-store-badge.png" alt="app-store-lnk"/>
-            <img src="/src/images/google-play-badge.png" alt="play-store-lnk"/>
+            <a href="javascript:void(0)"><img src="/src/images/app-store-badge.png" alt="app-store-lnk"/></a>
+            <a href="javascript:void(0)"><img src="/src/images/google-play-badge.png" alt="play-store-lnk"/></a>
           </div>
-          <div class="social-lnks">
-            <a href="javascript:void(0)" class="fa-brands fa-twitter"></a>
-            <a href="javascript:void(0)" class="fa-brands fa-facebook-f"></a>
-            <a href="javascript:void(0)" class="fa-brands fa-instagram"></a>
-          </div>
-          
+          <div class="social-icons-wrapper">
+            <ul class="social-icons">
+              <li><a href="javascript:void(0)"> <img src="/src/images/twitter.png" alt='twitter-icon' width="16px" height="16px"/> </a></li>
+              <li><a href="javascript:void(0)"><img src="/src/images/facebook.png" alt='facebook-icon' width="16px" height="16px"/></a></li>
+              <li><a href="javascript:void(0)"><img src="/src/images/instagram.png" alt='insta-icon' width="16px" height="16px"/></a></li>
+            </ul>
+
+          </div> 
         </div>
         <hr>
+        <div class="logo-rights">© Logo, 2018. All rights reserved.</div>
+        
     </footer>
   </body>
 </html>

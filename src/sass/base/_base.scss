@@ -1,1 +1,14 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
 
+.contain {
+  @include prefix(object-fit, contain, o);
+
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
